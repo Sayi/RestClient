@@ -148,13 +148,13 @@ public class ResponseBodyFragment extends Fragment {
         settings.setCacheMode(WebSettings.LOAD_DEFAULT);
 
 
-        mWebView.setLongClickable(false);
-        mWebView.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                return true;
-            }
-        });
+//        mWebView.setLongClickable(false);
+//        mWebView.setOnLongClickListener(new View.OnLongClickListener() {
+//            @Override
+//            public boolean onLongClick(View v) {
+//                return true;
+//            }
+//        });
 
         mWebView.setWebViewClient(new WebViewClient() {
             @Override

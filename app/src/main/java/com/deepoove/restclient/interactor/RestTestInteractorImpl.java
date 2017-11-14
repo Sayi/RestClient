@@ -63,8 +63,8 @@ public class RestTestInteractorImpl implements RestTestInteractor {
         } else {
             result = new ArrayList<RestTest>();
             RestTest doc = new RestTest();
-            doc.setId("init_test_0");
-            doc.setUrl("http://petstore.swagger.io/v2/swagger.json");
+            doc.setId("init_rest_test_00");
+            doc.setUrl("https://api.github.com");
             result.add(doc);
             settings.put(key, result);
         }
