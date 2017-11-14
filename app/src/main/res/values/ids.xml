@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="item_click_support" type="id" />
+    <item name="rest_sort_up" type="id"></item>
+    <item name="rest_copy_request" type="id"></item>
+    <item name="rest_sort_down" type="id"></item>
+    <item name="rest_delete" type="id" />
+</resources>

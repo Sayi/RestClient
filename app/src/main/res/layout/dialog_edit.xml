@@ -1,0 +1,98 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:text="Query Parameter"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold"></TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_bottom"
+        android:paddingEnd="0dp"
+        android:paddingStart="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@+id/key"
+            android:minWidth="80dp"
+            android:text="@string/name"
+            android:textColor="@color/colorAccent" />
+
+        <EditText
+            android:id="@+id/key"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:inputType="text"
+            android:padding="16dp"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/hint"></EditText>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_bottom"
+        android:paddingEnd="0dp"
+        android:paddingStart="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@+id/value"
+            android:minWidth="80dp"
+            android:text="@string/value"
+            android:textColor="@color/colorAccent" />
+
+        <EditText
+            android:id="@+id/value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:inputType="text"
+            android:padding="16dp"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/hint"></EditText>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dialog_ok"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:clickable="true"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="@string/ok"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

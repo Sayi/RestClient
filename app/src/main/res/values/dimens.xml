@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="appbar_padding_top">0dp</dimen>
+    <dimen name="text_size">16sp</dimen>
+
+    <dimen name="default_padding">16dp</dimen>
+    <dimen name="default_margin">8dp</dimen>
+    <dimen name="text_size_body">14sp</dimen>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#9ac526</color>
+    <color name="colorPrimaryDark">#9ac526</color>
+    <color name="colorAccent">#666666</color>
+
+    <color name="white">#ffffff</color>
+    <color name="white_dark">#f5f5f5</color>
+    <color name="white_light">#fafafa</color>
+    <color name="hint">#999999</color>
+
+    <color name="divider">#d6d6d6</color>
+    <color name="error">#ffd9534f</color>
+
+
+    <color name="get">#6bbd5b</color>
+    <color name="post">#248fb2</color>
+    <color name="put">#9b708b</color>
+    <color name="delete">#e27a7a</color>
+
+</resources>

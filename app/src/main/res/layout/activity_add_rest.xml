@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:radiobox="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_dark"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:contentInsetEnd="0dp"
+        android:contentInsetRight="0dp"
+        android:padding="0dp"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:contentInsetEnd="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    <ScrollView
+        android:id="@+id/contentPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.deepoove.restclient.ui.RadioBoxView
+                android:id="@+id/requestMethod"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_margin="16dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                radiobox:selectColor="@color/colorPrimary"
+                radiobox:selectColorList="@array/selectColorArray"
+                radiobox:textArray="GET;POST;PUT;DELETE">
+
+                <requestFocus />
+            </com.deepoove.restclient.ui.RadioBoxView>
+
+
+            <EditText
+                android:id="@+id/url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_bottom"
+                android:hint="@string/type_an_uri"
+                android:inputType="textUri|textMultiLine"
+                android:lines="2"
+                android:padding="16dp"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/hint"></EditText>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="130dp"
+                android:padding="16dp"
+                android:text="@string/query_parameters"
+                android:textColor="@color/colorAccent">
+
+                <requestFocus />
+            </TextView>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/queryParameterlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_layout"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:onClick="addMeta"
+                android:tag="query">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:paddingEnd="6dp"
+                    android:paddingStart="16dp"
+                    android:paddingTop="16dp"
+                    android:src="@drawable/ic_menu_add_black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add"
+                    android:textColor="@color/colorPrimary" />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="130dp"
+                    android:padding="16dp"
+                    android:text="@string/headers"
+                    android:textColor="@color/colorAccent" />
+
+
+                <ImageView
+                    android:id="@+id/auth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:onClick="navigateToAuth"
+                    android:padding="16dp"
+                    android:src="@drawable/ic_menu_auth_black_invalid" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/headerlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_layout"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:onClick="addMeta"
+                android:tag="header">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="16dp"
+                    android:paddingEnd="6dp"
+                    android:paddingStart="16dp"
+                    android:paddingTop="16dp"
+                    android:src="@drawable/ic_menu_add_black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/add"
+                    android:textColor="@color/colorPrimary" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/requestBody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="130dp"
+                        android:padding="16dp"
+                        android:text="@string/body"
+                        android:textColor="@color/colorAccent" />
+
+
+                    <com.deepoove.restclient.ui.RadioBoxView
+                        android:id="@+id/bodyType"
+                        android:layout_width="100dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        radiobox:selectColor="@color/colorPrimary"
+                        radiobox:textArray="Form;Text" />
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/bodyTypeJson"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_bottom">
+
+
+                    <EditText
+                        android:id="@+id/content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="0dp"
+                        android:background="@null"
+                        android:gravity="top|start"
+                        android:hint="@string/body_json_string"
+                        android:inputType="textMultiLine"
+                        android:minLines="6"
+                        android:padding="16dp"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/colorAccent"
+                        android:textColorHint="#999"></EditText>
+
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/formlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/bodyTypeForm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_layout"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:onClick="addMeta"
+                    android:tag="form"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="16dp"
+                        android:paddingEnd="6dp"
+                        android:paddingStart="16dp"
+                        android:paddingTop="16dp"
+                        android:src="@drawable/ic_menu_add_black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/add"
+                        android:textColor="@color/colorPrimary" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"></RelativeLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

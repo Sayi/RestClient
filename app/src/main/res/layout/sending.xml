@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="?attr/listPreferredItemHeight"
+    android:gravity="center">
+
+    <ProgressBar
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="@dimen/default_margin" />
+
+    <TextView
+        android:id="@+id/loading_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sending request"
+        android:layout_marginStart="@dimen/default_margin" />
+
+    <TextView
+        android:id="@+id/abort"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/default_margin"
+        android:background="@color/colorAccent"
+        android:clickable="true"
+        android:gravity="center"
+        android:minWidth="76dp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold" />
+
+</LinearLayout>

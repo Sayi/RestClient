@@ -1,0 +1,128 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    tools:context="com.deepoove.restclient.fragment.ResponseBodyFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/default_padding">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/listPreferredItemHeightSmall"
+            android:background="@drawable/border_bottom"
+            android:gravity="center_vertical"
+            android:paddingEnd="@dimen/default_padding"
+            android:paddingStart="@dimen/default_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/elapsed_time"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"></TextView>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/generalLayout"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/listPreferredItemHeightSmall"
+            android:background="@drawable/selector_layout"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingEnd="@dimen/default_padding"
+            android:paddingStart="@dimen/default_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/general"
+                android:textColor="@color/colorAccent" />
+
+            <ImageView
+                android:id="@+id/indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_go_down"></ImageView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:padding="@dimen/default_padding">
+
+            <TextView
+                android:id="@+id/curl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif-monospace"
+
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/listPreferredItemHeightSmall"
+            android:background="@drawable/selector_layout"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingEnd="@dimen/default_padding"
+            android:paddingStart="@dimen/default_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/response_headers"
+                android:textColor="@color/colorAccent" />
+
+            <ImageView
+                android:id="@+id/indicator_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_go_down"></ImageView>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/header_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:padding="@dimen/default_padding">
+
+            <TextView
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif-monospace"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

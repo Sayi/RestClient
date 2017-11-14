@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:radiobox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:orientation="vertical"
+    tools:context="com.deepoove.restclient.fragment.ResponseBodyFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:padding="@dimen/default_padding">
+
+        <com.deepoove.restclient.ui.RadioBoxView
+            android:id="@+id/previewType"
+            android:layout_width="100dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            radiobox:selectColor="@color/colorPrimary"
+            radiobox:textArray="Pretty;Raw" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/codeView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="56dp">
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"
+            android:overScrollMode="never"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/jsonTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:paddingBottom="56dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/response"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif-monospace"
+            android:padding="@dimen/default_padding"
+            android:scrollbars="vertical"
+            android:textColor="@color/white" />
+    </ScrollView>
+
+
+</LinearLayout>

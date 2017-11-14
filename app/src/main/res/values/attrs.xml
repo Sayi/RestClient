@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="RadioBox">
+        <attr name="textArray" format="string" />
+        <attr name="selectColor" format="color" />
+        <attr name="selectColorList" format="reference" />
+    </declare-styleable>
+
+</resources>

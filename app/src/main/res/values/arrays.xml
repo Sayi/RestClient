@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="selectColorArray">
+        <item>@color/get</item>
+        <item>@color/post</item>
+        <item>@color/put</item>
+        <item>@color/delete</item>
+    </array>
+
+</resources>

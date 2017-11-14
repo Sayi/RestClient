@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.deepoove.twig.activity.SearchActivity">
+    <item
+        android:id="@+id/action_save_rest"
+        android:title="Save"
+        android:icon="@drawable/ic_menu_save_2"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_send"
+        android:title="Send"
+        android:icon="@drawable/ic_menu_send"
+        app:showAsAction="always" />
+</menu>
