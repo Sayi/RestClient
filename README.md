@@ -1,6 +1,7 @@
 # RestClient
-![logo](docs/logo.png)
-Blogger Android App, based on github issues.
+
+<img src="docs/logo.png" width=256 height=256 />
+
 
 
 1. Create rest apis: http or https
